@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netflix Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar img {
+      height: 40px;
+    }
+
+    .banner {
+      height: 60vh;
+      background-size:cover;
+      background-position: center center;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 70px 30px;
+      
+    }
+
+    .banner-content {
+      width: 1400px;
+      height:250px;
+      background-image:url("allofusaredead.jpg")
+      
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+
+    .row {
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+
+    .row h2 {
+      margin-bottom: 10px;
+    }
+
+    .row-posters {
+      display: flex;
+      overflow-x: scroll;
+      padding-bottom: 10px;
+    }
+
+    .row-posters::-webkit-scrollbar {
+      display: none;
+    }
+
+    .row-posters img {
+      width: 150px;
+      object-fit: contain;
+      margin-right: 10px;
+      border-radius: 5px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .row-posters img:hover {
+      transform: scale(1.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo" />
+  </div>
+
+  <header class="banner">
+    <div class="banner-content">
+      <h1>All of us are dead</h1>
+    </div>
+  </header>
+
+  <section class="row">
+    <h2>Trending Now</h2>
+    <div class="row-posters" id="trendingRow"></div>
+  </section>
+
+  <section class="row">
+    <h2>Top Rated</h2>
+    <div class="row-posters" id="topRatedRow"></div>
+  </section>
+
+  <footer>
+    Netflix Clone by me | 
+  </footer>
+
+  <script>
+    const posterUrls = [
+      'vampirediaries.jpg',
+      'https://m.media-amazon.com/images/I/71niXI3lxlL._AC_UF1000,1000_QL80_.jpg',
+      'marvel.jpg',
+      'https://m.media-amazon.com/images/I/71c05lTE03L._AC_UF1000,1000_QL80_.jpg',
+      'https://m.media-amazon.com/images/I/71g40mlbinL._AC_UF1000,1000_QL80_.jpg',
+      'https://m.media-amazon.com/images/I/61OUGpUfAyL._AC_UF894,1000_QL80_.jpg',
+      'squid.webp',
+      'thesummeriturnedpretty.jpg',
+      'narcos.jpg'
+    ];
+
+    function renderRow(rowId) {
+      const row = document.getElementById(rowId);
+      posterUrls.forEach(url => {
+        const img = document.createElement('img');
+        img.src = url;
+        row.appendChild(img);
+      });
+    }
+
+    renderRow('trendingRow');
+    renderRow('topRatedRow');
+  </script>
+</body>
+</html>

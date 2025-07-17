@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Course Website</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      color: #333;
+    }
+    header, footer {
+      background-color: #6200ea;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd600;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: slideUp 1s ease-in-out;
+    }
+    h2 {
+      text-align: center;
+      color: #6200ea;
+      margin-bottom: 20px;
+    }
+    .course {
+      background: #f3e5f5;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    .course:hover {
+      transform: scale(1.02);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      background-color: #6200ea;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background-color: #3700b3;
+    }
+    footer {
+      margin-top: 40px;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Online learning platform</h1><br>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#register">Register</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="container" id="home">
+  <h2>Available Courses</h2>
+  <div class="course">
+    <h3>Frontend Development</h3>
+    <p>Learn HTML, CSS, JavaScript, and React. Duration: 3 months. Includes live projects, mentorship, and certification.</p>
+  </div>
+  <div class="course">
+    <h3>Backend Development</h3>
+    <p>Learn Node.js, Express, MongoDB, and APIs. Duration: 3 months. Includes real-world projects and expert guidance.</p>
+  </div>
+  <div class="course">
+    <h3>Full Stack Web Development</h3>
+    <p>Complete course including frontend and backend development with real-time deployment training. Duration: 6 months.</p>
+  </div>
+</div>
+
+<div class="container" id="about">
+  <h2>About Us</h2>
+  <p>Welcome to Online learning platform, your destination for high-quality, affordable tech education. We offer hands-on learning experiences designed to build your real-world skills. Our instructors are industry professionals dedicated to your growth and success.</p>
+</div>
+
+<div class="container" id="register">
+  <h2>Register for a Course</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Course Name" required>
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<div class="container" id="contact">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2025 Online learning platform. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
