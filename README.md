@@ -1,5 +1,5 @@
 # Hunar-Intern
-web-development internship projects:<br> 
+Web-development internship projects:<br> 
 TASK-1 -> first.html : It contains TASK-1 of the internship , here, I've created a simple personal homepage , using HTML and CSS.
 <br>
 TASK-2 -> second.html : It contains TASK-2 of the internship , here , I've created an online course website , using HTML and CSS.
